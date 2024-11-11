@@ -13,11 +13,11 @@
     <name>AboutDialog</name>
     <message>
         <source>About Wireshark</source>
-        <translation>关于 Wireshark</translation>
+        <translation>关于协议分析工具</translation>
     </message>
     <message>
         <source>Wireshark</source>
-        <translation>Wireshark</translation>
+        <translation>协议分析工具</translation>
     </message>
     <message>
         <source>&lt;span size=\&quot;x-large\&quot; weight=\&quot;bold\&quot;&gt;Network Protocol Analyzer&lt;/span&gt;</source>
@@ -1198,7 +1198,7 @@
         <source>Created by Wireshark %1
 
 </source>
-        <translation>通过 Wireshark 创建 %1</translation>
+        <translation>通过协议分析工具创建 %1</translation>
     </message>
     <message>
         <source>Created by Stratoshark %1
@@ -7071,15 +7071,15 @@ For example, use 1 hour to have a new file created every hour on the hour.</sour
     </message>
     <message>
         <source>This version of Wireshark does not save pipe settings.</source>
-        <translation>这个版本的 Wireshark 无法保存管道设置。</translation>
+        <translation>这个版本的协议分析工具无法保存管道设置。</translation>
     </message>
     <message>
         <source>This version of Wireshark does not save remote settings.</source>
-        <translation>这个版本的 Wireshark 无法保存远端设置。</translation>
+        <translation>这个版本的协议分析工具无法保存远端设置。</translation>
     </message>
     <message>
         <source>This version of Wireshark does not support remote interfaces.</source>
-        <translation>这个版本的 Wireshark 不支持远端接口。</translation>
+        <translation>这个版本的协议分析工具不支持远端接口。</translation>
     </message>
     <message>
         <source>New Pipe</source>
@@ -8275,7 +8275,7 @@ For example, use 1 hour to have a new file created every hour on the hour.</sour
     </message>
     <message>
         <source>&lt;p&gt;The Wireshark Wiki is maintained by the community.&lt;/p&gt;&lt;p&gt;The page you are about to load might be wonderful, incomplete, wrong, or nonexistent.&lt;/p&gt;&lt;p&gt;Proceed to the wiki?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Wireshark Wiki 由社区进行维护。&lt;/p&gt;&lt;p&gt;您即将加载的页面可能是良好的、不完整的、有错误的，甚至不存在的。&lt;/p&gt;&lt;p&gt;继续访问该 Wiki？&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;由社区进行维护。&lt;/p&gt;&lt;p&gt;您即将加载的页面可能是良好的、不完整的、有错误的，甚至不存在的。&lt;/p&gt;&lt;p&gt;继续访问该 Wiki？&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Colorize with Filter</source>
@@ -10483,7 +10483,7 @@ For example, use 1 hour to have a new file created every hour on the hour.</sour
     <name>SCTPAllAssocsDialog</name>
     <message>
         <source>Wireshark - SCTP Associations</source>
-        <translation>Wireshark - SCTP 分析助手</translation>
+        <translation>协议分析工具 - SCTP 分析助手</translation>
     </message>
     <message>
         <source>ID</source>
@@ -10522,7 +10522,7 @@ For example, use 1 hour to have a new file created every hour on the hour.</sour
     <name>SCTPAssocAnalyseDialog</name>
     <message>
         <source>Wireshark - Analyse Association</source>
-        <translation>Wireshark - 分析助手</translation>
+        <translation>协议分析工具 - 分析助手</translation>
     </message>
     <message>
         <source>TabWidget</source>
@@ -12927,7 +12927,7 @@ For example, use 1 hour to have a new file created every hour on the hour.</sour
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large;&quot;&gt;Welcome to Wireshark&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large;&quot;&gt;欢迎使用 Wireshark&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large;&quot;&gt;欢迎使用协议分析工具&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open a file on your file system&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -13039,7 +13039,7 @@ a:hover {
     </message>
     <message>
         <source>You are sniffing the glue that holds the Internet together using Wireshark </source>
-        <translation>你正在使用 Wireshark 嗅探互联网的联机</translation>
+        <translation>你正在使用协议分析工具嗅探互联网的联机</translation>
     </message>
     <message>
         <source>You are sniffing the glue that holds your system together using Stratoshark </source>
@@ -13051,7 +13051,7 @@ a:hover {
     </message>
     <message>
         <source>You are running Wireshark </source>
-        <translation>正在运行 Wireshark</translation>
+        <translation>正在运行协议分析工具</translation>
     </message>
     <message>
         <source> You receive automatic updates.</source>
@@ -13114,7 +13114,7 @@ a:hover {
     </message>
     <message>
         <source>Wireless controls are not supported in this version of Wireshark.</source>
-        <translation>此版本的 Wireshark 不支持无线控件。</translation>
+        <translation>此版本的协议分析工具不支持无线控件。</translation>
     </message>
     <message>
         <source>External Helper</source>
@@ -13159,7 +13159,7 @@ a:hover {
     <name>WiresharkMainWindow</name>
     <message>
         <source>Wireshark</source>
-        <translation>Wireshark</translation>
+        <translation>协议分析工具</translation>
     </message>
     <message>
         <source>Go to packet</source>
@@ -13299,7 +13299,7 @@ a:hover {
     </message>
     <message>
         <source>Quit Wireshark</source>
-        <translation>退出 Wireshark</translation>
+        <translation>退出协议分析工具</translation>
     </message>
     <message>
         <source>&amp;Start</source>
@@ -13363,7 +13363,7 @@ a:hover {
     </message>
     <message>
         <source>&amp;About Wireshark</source>
-        <translation>关于 Wireshark (&amp;A)</translation>
+        <translation>关于协议分析工具(&amp;A)</translation>
     </message>
     <message>
         <source>Ask (Q&amp;&amp;A)</source>
@@ -13800,7 +13800,7 @@ a:hover {
     </message>
     <message>
         <source>Manage Wireshark&apos;s preferences</source>
-        <translation>管理 Wireshark 的首选项设置</translation>
+        <translation>管理协议分析工具的首选项设置</translation>
     </message>
     <message>
         <source>Capture File Properties</source>
@@ -14814,7 +14814,7 @@ a:hover {
     </message>
     <message>
         <source>Open the Wireshark wiki page for this protocol.</source>
-        <translation>打开针对此协议的 Wireshark Wiki 页面。</translation>
+        <translation>打开针对此协议的协议分析工具页面。</translation>
     </message>
     <message>
         <source>Filter Field Reference</source>
@@ -15183,7 +15183,7 @@ a:hover {
     </message>
     <message>
         <source>The Wireshark Network Analyzer</source>
-        <translation>Wireshark 网络分析器</translation>
+        <translation>协议分析工具网络分析器</translation>
     </message>
     <message>
         <source>Capturing from %1</source>
@@ -15370,7 +15370,7 @@ a:hover {
     </message>
     <message>
         <source>&lt;p&gt;The Wireshark Wiki is maintained by the community.&lt;/p&gt;&lt;p&gt;The page you are about to load might be wonderful, incomplete, wrong, or nonexistent.&lt;/p&gt;&lt;p&gt;Proceed to the wiki?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Wireshark Wiki 由社区进行维护。&lt;/p&gt;&lt;p&gt;您即将加载的页面可能是良好的、不完整的、有错误的，甚至不存在的。&lt;/p&gt;&lt;p&gt;继续访问该 Wiki？&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;协议分析工具由社区进行维护。&lt;/p&gt;&lt;p&gt;您即将加载的页面可能是良好的、不完整的、有错误的，甚至不存在的。&lt;/p&gt;&lt;p&gt;继续访问该 Wiki？&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Loading</source>
