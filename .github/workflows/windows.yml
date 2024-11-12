@@ -14,41 +14,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Choco install
         run: choco install -y --force --no-progress asciidoctorj xsltproc docbook-bundle nsis winflexbison3 cmake
-
       - name: Download PortableApps Installer
         run: |
           curl -L -o PortableApps.comInstaller_3.8.12.paf.exe https://download2.portableapps.com/portableapps/PortableApps.comInstaller/PortableApps.comInstaller_3.8.12.paf.exe
           curl -L -o PortableApps.comLauncher_2.2.9.paf.exe https://download2.portableapps.com/portableapps/PortableApps.comLauncher/PortableApps.comLauncher_2.2.9.paf.exe
-          7z x PortableApps.comInstaller_3.8.12.paf.exe -oportableapps_installer
-          7z x PortableApps.comLauncher_2.2.9.paf.exe -oportableapps_launcher
-
+      - name: Install PortableApps Installer
+        run: |
+          7z x -y PortableApps.comInstaller_3.8.12.paf.exe -o"portableapps_installer"
+          7z x -y PortableApps.comLauncher_2.2.9.paf.exe -o"portableapps_launcher"
       - name: Install strawberryperl
         uses: shogo82148/actions-setup-perl@v1
         with:
           perl-version: '5.30'
           distribution: strawberry
-
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
           arch: win64_msvc2019_64
           version: 6.2.3
           modules: 'qt5compat'
-
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v2
         with:
           vs-version: 16.8
-
       - name: Set MSVC command prompt
         uses: ilammy/msvc-dev-cmd@v1
-
       - name: Mkdir
         run: mkdir build
-
       - name: Cmake
         run: cmake -DCMAKE_SYSTEM_VERSION="10.0.20348.0" -A x64 ..
         env:
@@ -56,50 +50,40 @@ jobs:
           WIRESHARK_BASE_DIR: C:/wireshark-libs
           QT5_BASE_DIR: C:/Qt/5.12.3/msvc2017_64
         working-directory: build
-
       - name: Build
         run: cmake --build . --config RelWithDebInfo
         working-directory: build
-
       - name: Build guides
         run: cmake --build . --config RelWithDebInfo --target user_guide_html
         working-directory: build
-
       - name: Build test-programs
         run: cmake --build . --config RelWithDebInfo --target test-programs
         working-directory: build
-
       - name: Set up Python 3.8
         uses: actions/setup-python@v5
         with:
           python-version: 3.8
-
       - name: Install pytest
         run: pip install pytest pytest-xdist
-
       - name: Run tests
         env:
           PYTEST_ADDOPTS: --skip-missing-programs=rawshark
         run: pytest
         working-directory: build
-
       - name: Build Windows pkg
         run: |
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_nsis_prep.vcxproj
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_nsis.vcxproj
         working-directory: build
-
       - name: Build PortableApps pkg
         run: |
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_portableapps.vcxproj
         working-directory: build
-
       - name: Upload Windows packages
         uses: actions/upload-artifact@v4
         with:
           name: package
           path: build/packaging/nsis/*exe
-
       - name: Upload PortableApps package
         uses: actions/upload-artifact@v4
         with:
