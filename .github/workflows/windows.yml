@@ -16,14 +16,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Choco install
         run: choco install -y --force --no-progress asciidoctorj xsltproc docbook-bundle nsis winflexbison3 cmake
-      - name: Download PortableApps Installer
-        run: |
-          curl -L -o PortableApps.comInstaller_3.8.12.paf.exe https://download2.portableapps.com/portableapps/PortableApps.comInstaller/PortableApps.comInstaller_3.8.12.paf.exe
-          curl -L -o PortableApps.comLauncher_2.2.9.paf.exe https://download2.portableapps.com/portableapps/PortableApps.comLauncher/PortableApps.comLauncher_2.2.9.paf.exe
-      - name: Install PortableApps Installer
-        run: |
-          7z x -y PortableApps.comInstaller_3.8.12.paf.exe -o"portableapps_installer"
-          7z x -y PortableApps.comLauncher_2.2.9.paf.exe -o"portableapps_launcher"
       - name: Install strawberryperl
         uses: shogo82148/actions-setup-perl@v1
         with:
@@ -75,17 +67,8 @@ jobs:
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_nsis_prep.vcxproj
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_nsis.vcxproj
         working-directory: build
-      - name: Build PortableApps pkg
-        run: |
-          msbuild /m /p:Configuration=RelWithDebInfo wireshark_portableapps.vcxproj
-        working-directory: build
       - name: Upload Windows packages
         uses: actions/upload-artifact@v4
         with:
           name: package
           path: build/packaging/nsis/*exe
-      - name: Upload PortableApps package
-        uses: actions/upload-artifact@v4
-        with:
-          name: portable_package
-          path: build/packaging/portableapps/*

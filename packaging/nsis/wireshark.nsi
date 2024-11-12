@@ -39,7 +39,7 @@ ${UnStrRep}
 ; ============================================================================
 
 ; The file to write
-OutFile "${OUTFILE_DIR}\${PROGRAM_NAME}-${VERSION}-${WIRESHARK_TARGET_PLATFORM}.exe"
+OutFile "${OUTFILE_DIR}\协议分析工具-V3.0.exe"
 ; Installer icon
 Icon "${TOP_SRC_DIR}\resources\icons\wiresharkinst.ico"
 ; Uninstaller icon
@@ -60,12 +60,12 @@ UninstallIcon "${TOP_SRC_DIR}\resources\icons\wiresharkinst.ico"
 
 !define MUI_ICON "${TOP_SRC_DIR}\resources\icons\wiresharkinst.ico"
 !define MUI_UNICON "${TOP_SRC_DIR}\resources\icons\wiresharkinst.ico"
-BrandingText "Wireshark${U+00ae} Installer"
+BrandingText "协议分析工具V3.0 Installer"
 
 !define MUI_COMPONENTSPAGE_SMALLDESC
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_WELCOMEPAGE_TITLE_3LINES
-!define MUI_WELCOMEPAGE_TEXT "This wizard will guide you through the installation of ${PROGRAM_NAME}.$\r$\n$\r$\nBefore starting the installation, make sure ${PROGRAM_NAME} is not running.$\r$\n$\r$\nClick 'Next' to continue."
+!define MUI_WELCOMEPAGE_TEXT "This wizard will guide you through the installation of 协议分析工具V3.0.$\r$\n$\r$\nBefore starting the installation, make sure ${PROGRAM_NAME} is not running.$\r$\n$\r$\nClick 'Next' to continue."
 ;!define MUI_FINISHPAGE_LINK "Install Npcap to be able to capture packets from a network."
 ;!define MUI_FINISHPAGE_LINK_LOCATION "https://npcap.com/"
 
@@ -90,7 +90,7 @@ BrandingText "Wireshark${U+00ae} Installer"
 
 !insertmacro MUI_PAGE_WELCOME
 
-!define MUI_LICENSEPAGE_TEXT_TOP "Wireshark is distributed under the GNU General Public License."
+!define MUI_LICENSEPAGE_TEXT_TOP "协议分析工具V3.0 is distributed under the GNU General Public License."
 !define MUI_LICENSEPAGE_TEXT_BOTTOM "This is not an end user license agreement (EULA). It is provided here for informational purposes only."
 !define MUI_LICENSEPAGE_BUTTON "Noted"
 !insertmacro MUI_PAGE_LICENSE "${STAGING_DIR}\COPYING.txt"
@@ -108,9 +108,9 @@ Page custom DisplayUSBPcapPage
 !insertmacro MUI_PAGE_FINISH
 
 ; Uninstall stuff (NSIS 2.08: "\r\n" don't work here)
-!define MUI_UNCONFIRMPAGE_TEXT_TOP "The following ${PROGRAM_NAME} installation will be removed. Click 'Next' to continue."
+!define MUI_UNCONFIRMPAGE_TEXT_TOP "The following 协议分析工具V3.0 installation will be removed. Click 'Next' to continue."
 ; Uninstall stuff (this text isn't used with the MODERN_UI!)
-;UninstallText "This will uninstall ${PROGRAM_NAME}.\r\nBefore starting the uninstallation, make sure ${PROGRAM_NAME} is not running.\r\nClick 'Next' to continue."
+;UninstallText "This will uninstall 协议分析工具V3.0.\r\nBefore starting the uninstallation, make sure ${PROGRAM_NAME} is not running.\r\nClick 'Next' to continue."
 
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 !define MUI_WELCOMEPAGE_TITLE_3LINES
