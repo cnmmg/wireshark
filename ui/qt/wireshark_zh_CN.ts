@@ -12926,7 +12926,7 @@ For example, use 1 hour to have a new file created every hour on the hour.</sour
         <translation>表单</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large;&quot;&gt;Welcome to Wireshark&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large;&quot;&gt;欢迎使用协议分析工具&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large;&quot;&gt;欢迎使用协议分析工具&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -13055,7 +13055,7 @@ a:hover {
     </message>
     <message>
         <source> You receive automatic updates.</source>
-        <translation>接受自动更新。</translation>
+        <translation></translation>
     </message>
     <message>
         <source> You have disabled automatic updates.</source>

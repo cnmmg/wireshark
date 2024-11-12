@@ -1,4 +1,4 @@
-;
+﻿;
 ; wireshark.nsi
 ;
 
@@ -292,7 +292,7 @@ Var WIX_UNINSTALLSTRING
 Function .onInit
   ; http://forums.winamp.com/printthread.php?s=16ffcdd04a8c8d52bee90c0cae273ac5&threadid=262873
   ${IfNot} ${RunningX64}
-    MessageBox MB_OK "Wireshark only runs on 64 bit machines.$\nTry installing a 32 bit version (3.6 or earlier) instead." /SD IDOK
+    MessageBox MB_OK "协议分析工具仅支持64位.$\n." /SD IDOK
     Abort
   ${EndIf}
 
@@ -326,14 +326,14 @@ ${EndIf}
 
 ${If} ${IsWinNT4}
   MessageBox MB_OK \
-    "Windows NT 4.0 is no longer supported.$\nPlease install Wireshark 0.99.4 instead." \
+    "Windows NT 4.0 is no longer supported.$\nPlease install 协议分析工具 0.99.4 instead." \
     /SD IDOK
   Quit
 ${EndIf}
 
 ${If} ${IsWin2000}
   MessageBox MB_OK \
-    "Windows 2000 is no longer supported.$\nPlease install Wireshark 1.2 or 1.0 instead." \
+    "Windows 2000 is no longer supported.$\nPlease install 协议分析工具 1.2 or 1.0 instead." \
     /SD IDOK
   Quit
 ${EndIf}
@@ -502,7 +502,7 @@ Function DisplayDonatePage
 FunctionEnd
 
 Function DisplayNpcapPage
-  !insertmacro MUI_HEADER_TEXT "Packet Capture" "Wireshark requires Npcap to capture live network data."
+  !insertmacro MUI_HEADER_TEXT "Packet Capture" "协议分析工具 requires Npcap to capture live network data."
   !insertmacro INSTALLOPTIONS_DISPLAY "NpcapPage.ini"
 FunctionEnd
 
@@ -991,10 +991,10 @@ IfSilent SecRequired_skip_Npcap
 ; Install Npcap (depending on npcap page setting)
 ReadINIStr $0 "$PLUGINSDIR\NpcapPage.ini" "Field 4" "State"
 StrCmp $0 "0" SecRequired_skip_Npcap
-SetOutPath $INSTDIR
-File "${EXTRA_INSTALLER_DIR}\npcap-${NPCAP_PACKAGE_VERSION}.exe"
-ExecWait '"$INSTDIR\npcap-${NPCAP_PACKAGE_VERSION}.exe" /winpcap_mode=no /loopback_support=no' $0
-DetailPrint "Npcap installer returned $0"
+; SetOutPath $INSTDIR
+; File "${EXTRA_INSTALLER_DIR}\npcap-${NPCAP_PACKAGE_VERSION}.exe"
+; ExecWait '"$INSTDIR\npcap-${NPCAP_PACKAGE_VERSION}.exe" /winpcap_mode=no /loopback_support=no' $0
+; DetailPrint "Npcap installer returned $0"
 SecRequired_skip_Npcap:
 
 ; If running as a silent installer, don't try to install USBPcap
@@ -1002,10 +1002,10 @@ IfSilent SecRequired_skip_USBPcap
 
 ReadINIStr $0 "$PLUGINSDIR\USBPcapPage.ini" "Field 4" "State"
 StrCmp $0 "0" SecRequired_skip_USBPcap
-SetOutPath $INSTDIR
-File "${EXTRA_INSTALLER_DIR}\USBPcapSetup-${USBPCAP_PACKAGE_VERSION}.exe"
-ExecWait '"$INSTDIR\USBPcapSetup-${USBPCAP_PACKAGE_VERSION}.exe"' $0
-DetailPrint "USBPcap installer returned $0"
+; SetOutPath $INSTDIR
+; File "${EXTRA_INSTALLER_DIR}\USBPcapSetup-${USBPCAP_PACKAGE_VERSION}.exe"
+; ExecWait '"$INSTDIR\USBPcapSetup-${USBPCAP_PACKAGE_VERSION}.exe"' $0
+; DetailPrint "USBPcap installer returned $0"
 ${If} $0 == "0"
   ${If} ${RunningX64}
     ${DisableX64FSRedirection}

@@ -22,10 +22,10 @@ if(POLICY CMP0135)
 endif()
 
 if(WIN32 AND NOT DEFINED ENV{MSYSTEM})
-	set(_project_name Wireshark)
+	set(_project_name 协议分析工具)
 	set(_log_project_name Stratoshark)
 else()
-	set(_project_name wireshark)
+	set(_project_name 协议分析工具)
 	set(_log_project_name stratoshark)
 endif()
 
