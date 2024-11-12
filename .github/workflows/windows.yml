@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Choco install
-        run: choco install -y --force --no-progress asciidoctorj xsltproc docbook-bundle nsis winflexbison3 cmake
+        run: choco install -y --force --no-progress asciidoctorj xsltproc docbook-bundle nsis winflexbison3 cmake portableapps.com-launcher portableapps.com-installer
       - name: Install strawberryperl
         uses: shogo82148/actions-setup-perl@v1
         with:
@@ -67,8 +67,17 @@ jobs:
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_nsis_prep.vcxproj
           msbuild /m /p:Configuration=RelWithDebInfo wireshark_nsis.vcxproj
         working-directory: build
+      - name: Build PortableApps pkg
+        run: |
+          msbuild /m /p:Configuration=RelWithDebInfo wireshark_portableapps.vcxproj
+        working-directory: build
       - name: Upload Windows packages
         uses: actions/upload-artifact@v4
         with:
           name: package
           path: build/packaging/nsis/*exe
+      - name: Upload PortableApps package
+        uses: actions/upload-artifact@v4
+        with:
+          name: portable_package
+          path: build/packaging/portableapps/*

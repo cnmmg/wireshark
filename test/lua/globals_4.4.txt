@@ -1,4 +1,4 @@
--- Wireshark version: 4.5.0
+-- Wireshark version: 3.0
 {
     ["Address"] = {
         ["ether"] = '<function 1>',
